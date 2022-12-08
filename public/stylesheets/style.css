@@ -1,20 +1,124 @@
-.brand-logo {
-  margin-left: 15px;
+
+* {
+  box-sizing: border-box;
+  font-family: Helvetica;
+  color: #1f2122;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas:
+    "nav"
+    "main"
 }
 
-.card .card-content .card-title {
-  margin-bottom: 10px;
+body > nav {
+  grid-area: nav;
+  background-color: rgb(232, 232, 232);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px 0 40px;
 }
 
-#search-row form {
-  padding-top: 20px;
+body > main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: FFFFFF;
+  padding: 20px;
+  overflow-y: scroll;
 }
 
-.student-name {
-  position: relative;
-  top: -5px;
+nav > a {
+  margin: 15px;
+  text-decoration: none;
+ 
 }
 
-.collection-item form {
-  margin-top: -5px;
+nav > logo{
+  margin-right: auto;
 }
+
+#logo{
+
+  font-weight: normal;
+  text-align: left;
+  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+  font-size:large;
+}
+.hamburger {
+  display: block;
+  float:right;
+  margin-right: 25px;
+  margin-top: 15px;
+  }
+.bar1, .bar2, .bar3 {
+  width: 25px;
+  height: 3px;
+  margin: 6px 0px;
+  background-color: rgb(56, 56, 56);
+  }
+
+a {
+  text-align: flex-end;
+  color: #3c3c3c;
+  font-family: 'Open Sans', sans-serif; 
+  font-size: 13px;
+  
+}
+
+#welcome{
+  margin-top: 350px;
+  text-align: center;
+  font-size: 45px;
+  font-family: 'Open Sans', sans-serif; 
+}
+#welcome-sub{
+  font-family: 'Open Sans', sans-serif; 
+}
+
+
+
+button{
+  border: none;
+  margin: 2vmin;
+  border-radius: 5vmin; 
+  justify-content: center;
+  outline: none;
+}
+
+#button-app{
+  width: 17vmin;
+  height: 5vmin;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(54, 115, 255);
+  font-weight: light;
+  font-size: 12px;
+  color: white;
+}
+#button-service{
+  width: 15vmin;
+  height: 5vmin;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(232, 232, 232);
+  font-weight: light;
+  font-size: 12px;
+  color:  rgb(56, 56, 56);
+
+}
+footer {
+  display: flex;
+  padding: 15px 0px 40px 20px;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(232, 232, 232);
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  }

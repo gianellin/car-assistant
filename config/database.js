@@ -1,7 +1,11 @@
 const mongoose = require('mongoose');
 
-// replace your database connection string here
-mongoose.connect(process.env.DATABASE_URL);
+// connect to a appointments database, or create an appointment database
+mongoose.connect(process.env.DATABASE_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
 
 const db = mongoose.connection;
 
@@ -9,3 +13,9 @@ const db = mongoose.connection;
 db.on('connected', function () {
   console.log(`Mongoose connected to: ${db.host}:${db.port}`);
 });
+
+db.on("error", function (err) {
+  console.log(`There was an ${err}`);
+});
+
+
