@@ -11,12 +11,23 @@ const appointmentSchema = new Schema({
     vehicleMake: {
         type: String,
         enum: ['Audi', 'Alfa Romeo', 'Ferrari', 'BMW', 
-        'Cadillac', 'LAND ROVER', 'Mercedes Benz' ]
+        'Cadillac', 'LAND ROVER', 'Mercedes Benz' ],
+        default: '',
     },
 
      model: { 
         type: String,
-        enum: [ "Model 1", "Model 2", "Model 3", "Model 4"]
+        enum: [ 'A3', 'A7', 'A8', 'Q3', 'Q5', 'Q7', 'Q8', 'e-tronGT',
+            'Giulia', 'Stelvio', 'Giulia Q', 'Stelvio Q', 'Tonale',
+            'Purosangue', '812 GTS', '296 GTB', '296 GTS', 'SF90 STRADALE', 'SF90 SPIDER', 'F8 TRIBUTO', 'F8 Spider',
+            'X1', 'X3', 'X4', 'X5', 'X6', 'X7', 'iX', 'Sedan', 'M3', 'M5', 'M8', '2S Coupe',
+            'Escalade', 'XT4', 'XT5', 'XT6', 'LYRIQ', 'CELESTIQ', 'CT5', 'CT4',
+            'Range Rover', 'Range Rover Sport', 'Range Rover Velar', 'Range Rover Evoque', 'Discovery', 'Discovery Sport', 'Defender',
+            'GLA', 'GLB', 'GLC', 'GLE', 'EQB', 'G-Class Suv', 'GLS SUV', 'EQS SUV', 'Maybach', 'A-Class Sedan', 'C-Class Sedan', 'E-Class Sedan', 'CLA Coupe', 'CLS Coupe', 'SL Roadster'
+        ],
+
+        default: '',
+
     },
        
 });
