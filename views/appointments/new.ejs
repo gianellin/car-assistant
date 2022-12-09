@@ -1,5 +1,109 @@
-<%- include('../partials/header') %>  
+<%- include('../partials/header') %>   
+    <div id="boxAppointment">
+        <div id="form1Title">  APPOINTMENT </div> <br> <br> <br>
+        <form id="appointment-form" action="/appointments" method="POST">
+            <label>Number
+                <input type="text" name="code">
+            </label><br><br>
+            <label> Date: 
+                <input type="datetime-local" name="date">
+            </label><br><br>
+            <label>Vehicle Year: 
+                <input type="text" name="vehicleYear">
+            </label><br><br>
+
+            
+            <label>Vehicle Make:
+                <select id="vehicleMake" name="vehicleMake" data-dependent-selector="#model">
+                    <option value="Audi" data-dependent-opt="Audi"> Audi</option>
+                    <option value="Alfa Romeo" data-dependent-opt="Alfa Romeo"> Alfa Romeo</option>
+                    <option value="Ferrari" data-dependent-opt="Ferrari"> Ferrari</option>
+                    <option value="BMW" data-dependent-opt="BMW"> BMW</option>
+                    <option value="Cadillac" data-dependent-opt="Cadillac"> Cadillac</option>
+                    <option value="Land Rover" data-dependent-opt="Land Rover"> Land Rover</option>
+                    <option value="Mercedes Benz" data-dependent-opt="Mercedes Benz"> Mercedes Benz</option>
+                </select>
+            </label>
+            <label> &nbsp&nbsp Model:
+                <select id="model" name="model">
+                    <option value="A3" data-from-dependent="Audi"> A3</option>
+                    <option value="A7" data-from-dependent="Audi">A7</option>
+                    <option value="A8" data-from-dependent="Audi">A8</option>
+                    <option value="Q3" data-from-dependent="Audi">Q3</option>
+                    <option value="Q5" data-from-dependent="Audi">Q5</option>
+                    <option value="Q7" data-from-dependent="Audi">Q7</option>
+                    <option value="Q8" data-from-dependent="Audi">Q8</option>
+                    <option value="e-tronGT" data-from-dependent="Audi">e-tronGT</option>
+                    <option value="Giulia" data-from-dependent="Alfa Romeo">Giulia</option>
+                    <option value="Stelvio" data-from-dependent="Alfa Romeo">Stelvio</option>
+                    <option value="Giulia Q" data-from-dependent="Alfa Romeo"> Giulia Q</option>
+                    <option value="Stelvio Q" data-from-dependent="Alfa Romeo"> Stelvio Q</option>
+                    <option value="Tonale" data-from-dependent="Alfa Romeo"> Tonale</option>
+                    <option value="Purosangue" data-from-dependent="Ferrari"> Purosangue</option>
+                    <option value="812 GTS" data-from-dependent="Ferrari"> 812 GTS</option>
+                    <option value="296 GTB" data-from-dependent="Ferrari">296 GTB</option>
+                    <option value="SF90 STRADALE" data-from-dependent="Ferrari">SF90 STRADALE</option>
+                    <option value="F8 TRIBUTO" data-from-dependent="Ferrari">F8 TRIBUTO</option>
+                    <option value="F8 Spider" data-from-dependent="Ferrari">F8 Spider</option>
+                    <option value="X1" data-from-dependent="BMW">X1</option>
+                    <option value="X3" data-from-dependent="BMW">X3</option>
+                    <option value="X4" data-from-dependent="BMW">X4</option>
+                    <option value="X5" data-from-dependent="BMW">X5</option>
+                    <option value="X6" data-from-dependent="BMW">X6</option>
+                    <option value="X7" data-from-dependent="BMW">X7</option>
+                    <option value="iX" data-from-dependent="BMW">iX</option>
+                    <option value="Sedan" data-from-dependent="BMW">Sedan</option>
+                    <option value="M3" data-from-dependent="BMW">M3</option>
+                    <option value="M5" data-from-dependent="BMW">M5</option>
+                    <option value="M8" data-from-dependent="BMW">M8</option>
+                    <option value="2S Coupe" data-from-dependent="BMW">2S Coupe</option>
+                    <option value="Escalade" data-from-dependent="Cadillac">Escalade</option>
+                    <option value="XT4" data-from-dependent="Cadillac">Escalade</option>
+                    <option value="XT5" data-from-dependent="Cadillac">Escalade</option>
+                    <option value="XT6" data-from-dependent="Cadillac">Escalade</option>
+                    <option value="LYRIQ" data-from-dependent="Cadillac">Escalade</option>
+                    <option value="CELESTIQ" data-from-dependent="Cadillac">Escalade</option>
+                    <option value="CT5" data-from-dependent="Cadillac">Escalade</option>
+                    <option value="CT4" data-from-dependent="Cadillac">Escalade</option>
+                    <option value="Range Rover" data-from-dependent="Land Rover">Range Rover</option>
+                    <option value="Range Rover Sport" data-from-dependent="Land Rover">Range Rover Sport</option>
+                    <option value="Range Rover Velar" data-from-dependent="Land Rover">Range Rover Velar</option>
+                    <option value="Range Rover Evoque" data-from-dependent="Land Rover">Range Rover Evoque</option>
+                    <option value="Discovery" data-from-dependent="Land Rover">Discovery</option>
+                    <option value="Discovery Sport" data-from-dependent="Land Rover">Discovery Sport</option>
+                    <option value="Defender" data-from-dependent="Land Rover">Defender</option>
+                    <option value="GLA" data-from-dependent="Mercedes Benz">GLA</option>
+                    <option value="GLB" data-from-dependent="Mercedes Benz">GLB</option>
+                    <option value="GLC" data-from-dependent="Mercedes Benz">GLC</option>
+                    <option value="GLE" data-from-dependent="Mercedes Benz">GLE</option>
+                    <option value="EQB" data-from-dependent="Mercedes Benz">EQB</option>
+                    <option value="G-Class Suv" data-from-dependent="Mercedes Benz">G-Class Suv</option>
+                    <option value="GLS SUV" data-from-dependent="Mercedes Benz">GLS SUV</option>
+                    <option value="EQS SUV" data-from-dependent="Mercedes Benz">EQS SUV</option>               
+                    <option value="Maybach" data-from-dependent="Mercedes Benz">Maybach</option>
+                    <option value="A-Class Sedan" data-from-dependent="Mercedes Benz">A-Class Sedan</option>
+                    <option value="C-Class Sedan" data-from-dependent="Mercedes Benz">C-Class Sedan</option>
+                    <option value="E-Class Sedan" data-from-dependent="Mercedes Benz">E-Class Sedan</option>
+                    <option value="CLA Coupe" data-from-dependent="Mercedes Benz">CLA Coupe</option>
+                    <option value="CLS Coupe" data-from-dependent="Mercedes Benz">CLS Coupe</option>
+                    <option value="SL Roadster" data-from-dependent="Mercedes Benz">SL Roadster</option>
+                </select>
+            </label> 
+            <input id="buttonAdd" type="submit" value="Add Appointment">   
+        </form>
+        <script>
+            document.addEventListener("change", checkSelect);
+            function checkSelect(evt) {
+                    const origin = evt.target;
+                    if (origin.dataset.dependentSelector) {
+                        const selectedOptFrom = origin.querySelector("option:checked").dataset.dependentOpt || "n/a";
+                        const addRemove = optData => (optData || "") === selectedOptFrom ? "add" : "remove";
+                        document.querySelectorAll(`${origin.dataset.dependentSelector} option`).forEach( opt => 
+                            opt.classList[addRemove(opt.dataset.fromDependent)]("display") );
+                    }
+            }
+        </script>
+    </div>
 
 
-
-<%- include('./partials/footer') %>
+<%- include('../partials/footer') %>

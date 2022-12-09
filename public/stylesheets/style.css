@@ -81,8 +81,6 @@ a {
   font-family: 'Open Sans', sans-serif; 
 }
 
-
-
 button{
   border: none;
   margin: 2vmin;
@@ -112,6 +110,37 @@ button{
   color:  rgb(56, 56, 56);
 
 }
+
+#boxAppointment{
+ 
+  background-color:  rgb(232, 232, 232);
+  padding: 50px 150px 50px 150px;
+  margin-top: 100px;
+}
+
+#buttonAdd{
+  border: none;
+  margin: 2vmin;
+  border-radius: 5vmin; 
+  justify-content: center;
+  outline: none;
+  width: 16vmin;
+  height: 4.5vmin;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(54, 115, 255);
+  font-weight: light;
+  font-size: 12px;
+  color: white;
+  display: center;
+
+}
+
+#form1Title{
+  font-size: 45px;
+  font-family: 'Open Sans', sans-serif; 
+  font-weight: light;
+}
 footer {
   display: flex;
   padding: 15px 0px 40px 20px;
@@ -121,4 +150,15 @@ footer {
   position: fixed;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
+  }
+
+
+
+
+  [data-from-dependent] {
+    display: none;
+  }
+  
+  [data-from-dependent].display {
+    display: initial;
   }

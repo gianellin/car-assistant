@@ -1,5 +1,24 @@
 <%- include('../partials/header') %>
-
-
-
-<%- include('./partials/footer') %>
+<h2 id=""> Appointments </h2>
+<table>
+  <thead>
+    <tr> 
+      <th> Number </th>
+      <th> Date </th>
+      <th> Vehicle Make </th>
+      <th> Vehicle Model </th>
+    </tr>
+  </thead>
+  <tbody>
+   <%appointments.forEach(function(a) { %>
+      <tr>
+        <td><%= a.code %></td>
+        <td><%= a.date %></td>
+        <td><%= a.vehicleMake %></td>
+        <td><%= a.model  %></td>
+        <td> <a href="/appointments/<%= a._id %>"> <button id="more"> + </button>       </a> </td>
+      </tr>
+      <% }); %>
+  </tbody>
+</table>
+<%- include('../partials/footer') %>

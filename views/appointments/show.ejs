@@ -1,3 +1,38 @@
-<%- include('../partials/header') %>   
+<%- include('../partials/header') %>
+   <div id="box">
+        <div id="row">
+            <div id="column1">
+                <div id="titleDetails"> Appointment Details</div> <br>
+                <div><b>  Number: </b></div>
+                <div> <%= appointmentDoc.code %> </div>
+                <div><b> Date: </b></div> 
+                <div> <%= appointmentDoc.date %> </div>
+                <div><b> Vehicle </b></div>
+                <div> <%= appointmentDoc.vehicleYear %> </div>
+                <div> <%= appointmentDoc.model %> </div>
+                <div> <%=  %> </div>
+            </div>
+            <div id="column2">
+                <div> Services</div> <br>
+                <table>
+                    <thead>
+                      <tr> 
+                        <th> </th>
+                        <th> Arrival Date </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                     <%# flightDoc.destinations.forEach(function(d) { %>
+                        <tr>
+                          <td><%#= d.airport %></td>
+                          <td><%#= d.arrival %></td>
+                        </tr>
+                        <%# }); %>
+                    </tbody>
+                </table>
 
-<%- include('./partials/footer') %>
+
+            </div>
+        </div>
+    </div>
+<%- include('../partials/footer') %>
