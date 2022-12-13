@@ -3,6 +3,8 @@
 /**
  * Module dependencies.
  */
+// top of the file import the connectDB function
+const { connectDB } = require("../config/database");
 
 var app = require('../server');
 var debug = require('debug')('sei-students:server');
@@ -24,6 +26,15 @@ var server = http.createServer(app);
 /**
  * Listen on provided port, on all network interfaces.
  */
+// Call our connectDB function then start our server listening on the port!
+connectDB().then(() => {
+ 
+  server.listen(port);
+  server.on("error", onError);
+  server.on("listening", onListening);
+
+  
+});
 
 server.listen(port);
 server.on('error', onError);

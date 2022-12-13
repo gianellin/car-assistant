@@ -1,21 +1,22 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-// connect to a appointments database, or create an appointment database
-mongoose.connect(process.env.DATABASE_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+// export the function that creates a database connection
+module.exports = {
+  connectDB,
+};
 
+async function connectDB() {
+  try {
+    const conn = await mongoose.connect(process.env.DATABASE_URL, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
 
-const db = mongoose.connection;
+    console.log(`MongoDB Connected: ${conn.connection.host}`);
 
-// database connection event
-db.on('connected', function () {
-  console.log(`Mongoose connected to: ${db.host}:${db.port}`);
-});
-
-db.on("error", function (err) {
-  console.log(`There was an ${err}`);
-});
-
-
+  } catch (err) {
+    console.log("err");
+    console.log(err, ' connecting to mongodb')
+    process.exit(1);
+  }
+}

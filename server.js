@@ -1,6 +1,8 @@
 // load the env consts
 require('dotenv').config();
 //const createError = require('http-errors');
+
+const MongoStore = require('connect-mongo');
 const express = require('express');
 const path = require('path');
 const logger = require('morgan');
@@ -9,6 +11,7 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const passport = require('passport');
 const methodOverride = require('method-override');
+
 
 const indexRouter = require('./routes/index');
 const appointmentsRouter = require('./routes/appointments');
@@ -32,6 +35,16 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(methodOverride('_method'));
+
+app.use(session({
+  store: MongoStore.create({
+    mongoUrl: process.env.DATABASE_URL
+  }),
+  secret: process.env.SECRET,
+  resave: false,
+  saveUninitialized: true
+}));
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(logger('dev'));
 app.use(express.json());
