@@ -1,0 +1,32 @@
+<%- include('../partials/header') %>   
+    <div id="boxService">
+        <div id="form2Title">  New Service </div> <br> <br> <br>
+        <form id="service-form" action="/appointments/<%= appointmentDoc%>" method="POST">
+            <label> Name:
+                <select name="name">
+                    <option value="Oil & Filter Change">Oil & Filter Change</option>
+                    <option value="Tire Rotation">Tire Rotation</option>
+                    <option value="State Inspection">State Inspection</option>
+                    <option value="Wheel Alignment">Wheel Alignment</option>
+                    <option value="Tire Replacement">Tire Replacement</option>
+                    <option value="Flat Repair">Flat Repair</option>
+                    <option value="Roadside Assistance">Roadside Assistance</option>
+                    <option value="Brake">Brake</option>
+                    <option value="Brake Fluid Exchange">Brake Fluid Exchange</option>
+                    <option value="Other">Other</option>
+                </select>
+            </label><br><br>
+            <label> Code:
+                <input type="text" name="code">
+            </label><br><br>
+            <label> Time:
+                <input type="text" name="time">
+            </label><br><br>
+            <label> Price:
+                <input type="text" name="price">
+            </label>
+            <input  type="submit" value="Add Service">   
+        </form>
+
+    </div>
+<%- include('../partials/footer') %>

@@ -10,26 +10,39 @@
                 <div><b> Vehicle </b></div>
                 <div> <%= appointmentDoc.vehicleYear %> </div>
                 <div> <%= appointmentDoc.model %> </div>
-                <div> <%=  %> </div>
+   
             </div>
             <div id="column2">
                 <div> Services</div> <br>
                 <table>
                     <thead>
                       <tr> 
-                        <th> </th>
-                        <th> Arrival Date </th>
+                        <th> Name </th>
+                        <th> Code  </th>
+                        <th> Time(days) </th>
+                        <th> Price($) </th>
                       </tr>
                     </thead>
                     <tbody>
-                     <%# flightDoc.destinations.forEach(function(d) { %>
+                     <% servicesDoc.forEach(function(s) { %>
                         <tr>
-                          <td><%#= d.airport %></td>
-                          <td><%#= d.arrival %></td>
+                          <td><%= s.name %></td>
+                          <td><%= s.code %></td>
+                          <td><%= s.time %>day(s)</td>
+                          <td>$ <%= s.price %></td>
+                          <!-- <td><form action="/appointments/<%#= s._id%>?_method=DELETE" method="POST">
+                                <button id="delete-button" type="submit"> - </button>
+                              </form> -->
+
+                          </td>
+                          <td><a href="/services/<%= s._id %>/edit"><button type="submit">Edit Service</button></a></td>
                         </tr>
-                        <%# }); %>
+
+                        
+                        <% }); %>
                     </tbody>
                 </table>
+                <a href="/appointments/<%= appointmentDoc._id %>/services/new"> <button id="service-button">Add Service </button> </a>
 
 
             </div>

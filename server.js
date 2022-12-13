@@ -12,6 +12,7 @@ const methodOverride = require('method-override');
 
 const indexRouter = require('./routes/index');
 const appointmentsRouter = require('./routes/appointments');
+const servicesRouter = require('./routes/services');
 
 //routes middleware
 
@@ -57,6 +58,7 @@ app.use(function (req, res, next) {
 // mount all routes with appropriate base paths
 app.use('/', indexRouter);
 app.use('/appointments', appointmentsRouter);
+app.use('/', servicesRouter);
 
 
 // invalid request, send 404 page

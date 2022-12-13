@@ -1,4 +1,5 @@
 <%- include('../partials/header') %>   
+
     <div id="boxAppointment">
         <div id="form1Title">  APPOINTMENT </div> <br> <br> <br>
         <form id="appointment-form" action="/appointments" method="POST">
@@ -11,8 +12,6 @@
             <label>Vehicle Year: 
                 <input type="text" name="vehicleYear">
             </label><br><br>
-
-            
             <label>Vehicle Make:
                 <select id="vehicleMake" name="vehicleMake" data-dependent-selector="#model">
                     <option value="Audi" data-dependent-opt="Audi"> Audi</option>
@@ -58,13 +57,13 @@
                     <option value="M8" data-from-dependent="BMW">M8</option>
                     <option value="2S Coupe" data-from-dependent="BMW">2S Coupe</option>
                     <option value="Escalade" data-from-dependent="Cadillac">Escalade</option>
-                    <option value="XT4" data-from-dependent="Cadillac">Escalade</option>
-                    <option value="XT5" data-from-dependent="Cadillac">Escalade</option>
-                    <option value="XT6" data-from-dependent="Cadillac">Escalade</option>
-                    <option value="LYRIQ" data-from-dependent="Cadillac">Escalade</option>
-                    <option value="CELESTIQ" data-from-dependent="Cadillac">Escalade</option>
-                    <option value="CT5" data-from-dependent="Cadillac">Escalade</option>
-                    <option value="CT4" data-from-dependent="Cadillac">Escalade</option>
+                    <option value="XT4" data-from-dependent="Cadillac">XT4</option>
+                    <option value="XT5" data-from-dependent="Cadillac">XT5</option>
+                    <option value="XT6" data-from-dependent="Cadillac">XT6'</option>
+                    <option value="LYRIQ" data-from-dependent="Cadillac">LYRIQ</option>
+                    <option value="CELESTIQ" data-from-dependent="Cadillac">CELESTIQ</option>
+                    <option value="CT5" data-from-dependent="Cadillac">CT5</option>
+                    <option value="CT4" data-from-dependent="Cadillac">CT4</option>
                     <option value="Range Rover" data-from-dependent="Land Rover">Range Rover</option>
                     <option value="Range Rover Sport" data-from-dependent="Land Rover">Range Rover Sport</option>
                     <option value="Range Rover Velar" data-from-dependent="Land Rover">Range Rover Velar</option>

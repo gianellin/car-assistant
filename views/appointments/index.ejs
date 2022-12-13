@@ -3,20 +3,25 @@
 <table>
   <thead>
     <tr> 
-      <th> Number </th>
-      <th> Date </th>
+      <th> Code </th>
       <th> Vehicle Make </th>
       <th> Vehicle Model </th>
+      <th> Date </th>
     </tr>
   </thead>
   <tbody>
    <%appointments.forEach(function(a) { %>
       <tr>
         <td><%= a.code %></td>
-        <td><%= a.date %></td>
+        
         <td><%= a.vehicleMake %></td>
         <td><%= a.model  %></td>
-        <td> <a href="/appointments/<%= a._id %>"> <button id="more"> + </button>       </a> </td>
+        <td><%= a.date %></td>
+        <td> <a href="/appointments/<%= a._id %>"> <button id="button-more"> + </button> </a>  
+          <form  action="/appointments/<%= a._id %>?_method=DELETE" method="POST">
+           <button id="delete-button" type ="submit"> - </button> 
+          </form>   
+        </td>
       </tr>
       <% }); %>
   </tbody>

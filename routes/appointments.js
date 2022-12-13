@@ -10,5 +10,6 @@ router.get('/new', isLoggedIn, appointmentCtrl.new);
 router.get('/', isLoggedIn, appointmentCtrl.index);
 router.get('/:id', isLoggedIn, appointmentCtrl.show);
 router.post('/', isLoggedIn, appointmentCtrl.create);
+router.delete('/:id', isLoggedIn, appointmentCtrl.delete);
 
 module.exports = router;

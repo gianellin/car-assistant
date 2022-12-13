@@ -11,11 +11,11 @@ const appointmentSchema = new Schema({
     vehicleMake: {
         type: String,
         enum: ['Audi', 'Alfa Romeo', 'Ferrari', 'BMW', 
-        'Cadillac', 'LAND ROVER', 'Mercedes Benz' ],
+        'Cadillac', 'Land Rover', 'Mercedes Benz' ],
         default: '',
     },
 
-     model: { 
+    model: { 
         type: String,
         enum: [ 'A3', 'A7', 'A8', 'Q3', 'Q5', 'Q7', 'Q8', 'e-tronGT',
             'Giulia', 'Stelvio', 'Giulia Q', 'Stelvio Q', 'Tonale',
