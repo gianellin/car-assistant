@@ -3,7 +3,7 @@
 
 CAR ASSISTANT (CA) is a Node/Express/MongoDB full stack application. This app helps users manage and plan their vehicle's auto repairs. 
 
-The idea was created to put into practise many concepts previously reviewed and full- CRUD data operations. CA was ideated to solve a real life problem, that many car ownwers have to deal with.
+The idea was created to put into practice many concepts previously reviewed and full- CRUD data operations. CA was ideated to solve a real life problem, that many car ownwers have to deal with.
 
 
 ![Car Assistant](public/images/01homepage.png)
@@ -54,6 +54,13 @@ This model has different functionalities, using CRUD
 ## Service Schema
 
 ![Service Schema](public/images/03Service.png)
+
+
+## DEPLOYED APP
+
+Find the deployed app:
+
+ ![Car Assistant](https://alive-crow-leggings.cyclic.app)
 
 
 ## API PATHS AND METHODS

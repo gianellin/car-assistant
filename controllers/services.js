@@ -4,20 +4,16 @@ const Appointment = require('../models/appointment');
 //CONTROLLERS for new resource with ref to flights
 
 //View a form for a new service
-let newService =(req, res) => {
-    const newService = new Service();
+const newService =(req, res) => {
+    
     res.render('services/new', { title: 'New Service', appointmentDoc: req.params.id}); 
 }
 
 // Create a new service in the show page
-let createService = (req, res) => {
-
+const createService = (req, res) => {
     req.body.appointment = req.params.id;
-
     console.log(req.body, "<---- this is the content of service FORM")
-
     Appointment.findById(req.params.id, function(err, appointmentDoc){
-    
        Service.create(req.body, function(err, serviceDoc){
             if(err) {
                 console.log(err, "There is an err in the Create from SERVICE resource handle")
@@ -29,11 +25,9 @@ let createService = (req, res) => {
 }
 
 
-let editService =(req, res) => {
-
+const editService =(req, res) => {
     Service.findById( req.params.id, function(err, serviceDoc){
         console.log(serviceDoc, "<-- this is the appointmentDOC");
-
             res.render('services/edit' , {title: 'Edit Service', serviceDoc});
         })
    
@@ -43,7 +37,7 @@ let editService =(req, res) => {
 
 // the ACTION attribute in the FORM is used to indicate where its data is sent to when it is submitted 
 
-let updateService = (req, res) => {
+const updateService = (req, res) => {
 
     Service.findByIdAndUpdate(req.params.id, req.body, {new: true},
         function(err, serviceDoc) {
