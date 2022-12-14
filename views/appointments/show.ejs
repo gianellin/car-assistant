@@ -3,8 +3,8 @@
         <div id="row">
             <div id="column1">
                 <div id="titleDetails"> Appointment Details</div> <br>
-                <div><b>  Number: </b></div>
-                <div> <%= appointmentDoc.code %> </div>
+                <div><b> Number: </b></div>
+                <div> <%= appointmentDoc.serial %> </div>
                 <div><b> Date: </b></div> 
                 <div> <%= appointmentDoc.date %> </div>
                 <div><b> Vehicle: </b></div>
@@ -27,7 +27,7 @@
                      <% servicesDoc.forEach(function(s) { %>
                         <tr>
                           <td> <%= s.name %></td>
-                          <td> <%= s.serial %></td>
+                          <td> <%= s.code %></td>
                           <td> <%= s.time %></td>
                           <td> <%= s.price %></td>
                           </td>
