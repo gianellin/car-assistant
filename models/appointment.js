@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const appointmentSchema = new Schema({
     
-    code: { type: Number, min: 1, max: 100},
+    serial: { type: Number, min: 1, max: 100},
     date: { type: Date, },
     vehicleYear: {type: String, 
                 match:/[1-2][0-9][0-9][0-9]\d?/},
@@ -23,7 +23,8 @@ const appointmentSchema = new Schema({
             'X1', 'X3', 'X4', 'X5', 'X6', 'X7', 'iX', 'Sedan', 'M3', 'M5', 'M8', '2S Coupe',
             'Escalade', 'XT4', 'XT5', 'XT6', 'LYRIQ', 'CELESTIQ', 'CT5', 'CT4',
             'Range Rover', 'Range Rover Sport', 'Range Rover Velar', 'Range Rover Evoque', 'Discovery', 'Discovery Sport', 'Defender',
-            'GLA', 'GLB', 'GLC', 'GLE', 'EQB', 'G-Class Suv', 'GLS SUV', 'EQS SUV', 'Maybach', 'A-Class Sedan', 'C-Class Sedan', 'E-Class Sedan', 'CLA Coupe', 'CLS Coupe', 'SL Roadster'
+            'GLA', 'GLB', 'GLC', 'GLE', 'EQB', 'G-Class Suv', 'GLS SUV', 'EQS SUV', 'Maybach', 'A-Class Sedan', 
+            'C-Class Sedan', 'E-Class Sedan', 'CLA Coupe', 'CLS Coupe', 'SL Roadster'
         ],
 
         default: '',

@@ -1,35 +1,123 @@
-# passport-boilerplate
+# CAR ASSISTANT
 
 
-This is your passport boilerplate.
+CAR ASSISTANT (CA) is a Node/Express/MongoDB full stack application. This app helps users manage and plan their vehicle's auto repairs. 
 
-## Setup 
-
-1. Clone the repo
-2. Rename the folder to your Project
-3. Delete the `.git` file, when you are in the root of the file, you can press `ls` and you should see a `.git` file, then go ahead and run `rm -rf .git`
+The idea was created to put into practise many concepts previously reviewed and full- CRUD data operations. CA was ideated to solve a real life problem, that many car ownwers have to deal with.
 
 
-#### Setup your git repo
-0. Setup your `.env` file and add all the things you need! (look at mongoose movies for reference!)
-1. in the project root `git init`
-2. `git add .` to add all the starter code
-3. `git commit -m "setup boilerplate"` 
-4. go to github and create your github and create a repo (Without a readme or liscense you can add that later!)
-5. copy the remote address
-6. In your terminal add the remote `git remote add origin yourGithubRepo'sAddressGoesHere`
-7. `git pull origin main` If a screen pulls up asking you to do something just press `:q` and then `enter` (thats vim btw :) )
-8. `git push origin main`
+![Car Assistant](public/images/01homepage.png)
+ 
 
-#### Setup your login (THE APP WON'T WORK until you do, no VIEWS are setup, or the landing route)
+## User Stories
 
-0. Setup your database connection string
-1. Then Setup Your User Model, 
-2. Follow the steps from the lesson plan to get your Google login credentials for your `.env` file (create the file if you haven't), or you can just copy the ones from earlier if you want to reuse them.
-3. Setup the Code in your config passport 
-4. Setup your callback routes in your `routes/index`
-5. Setup a view and test your login!
+1. AAU, Log into my account, so I can access to the app.
+1. AAU, I can create a new appointment by entering the information on a page that has a form and submitting it.
+1. AAU, I want to see a list of all the appointments I’ve made.
+1. AAU, I want to see a button for details for every car appointment.
+1. AAU, Once I click “+”, I want to be able to see my appointment details.
+1. AAU, I want to be able to eliminate appointments.
+1. AAU, I want to create a service in my car’s appointment page. Filling a form so it can select the type of service I want (price included).
+1. AAU, I want to be able to edit a service in my cars appointment page with an “Edit” button. I can have multiple services per appointment.
+1. AAU, I want to be able to access each view via a navigation bar at the top of the page with links to:
+	ALL APPOINTMENTS,
+	ADD APPOINTMENT.
 
-#### Make a commit 
+## Planning
 
-```git commit -m "setup up oauth and User Model"```
+1. Reviewed project requirements.
+1. Brainstorming session with colleages.
+1. Created an ER diagram.
+1. Wrote user stories.
+1. Designed wireframes in Illustrator.
+
+
+
+## Process
+
+1. Created a trello board with all goals to complete.
+1. Wrote code for UI.
+1. Wrote code for functionality, feature by feature.
+1. Tested its functionality.
+
+## DATA ENTITIES / MODEL
+
+The appointment schema contains many characteristics of the vehicle, and it is the main model for this app. 
+
+This model has different functionalities, using CRUD
+
+## Appointment Schema
+
+![Appointment Schema](public/images/02Appointment.png)
+
+
+## Service Schema
+
+![Service Schema](public/images/03Service.png)
+
+
+## API PATHS AND METHODS
+
+
+### User/Authentication
+
+| Method  | URL  |
+|:----------|:----------|
+| GET   | "/"    |
+| GET    | "auth/google"    |
+| GET    | "oauth2callback"    |
+| GET    | "/logout"    |
+
+
+### Appointment
+
+|Method | URL |
+|:----------|:----------|
+|GET   | "/new"   |
+GET   | "/"   |
+GET   | "/:id"    |
+|POST | "/"   |
+|DELETE    | "/:id"   |
+
+### Service
+
+| Method  | URL |
+|:----------|:----------|
+| GET  | "/appointments/:id/services/new"  |
+| GET    | "/services/:id/edit"   |
+| POST    | "/appointments/:id"   |
+| PUT    | "/services/:id"    |
+
+## Technologies Used
+
+- Node.JS 
+- JavaScript
+- EJS
+- Express.JS
+- MongoDB
+- Mongoose
+- HTML
+- CSS
+- Adobe Illustrator (All images were designed in Illustrator for personal preference).
+
+
+## ICE BOX/ FUTURE IMPROVEMENTS
+
+
+- Add a "Priority" feature.
+- Create a new identity called Providers.
+- Make Providers real time information integrate with CA application.
+- Add a third party API: google maps, to search for closest providers, and provide location acuracy.
+- Improve dropdown menus.
+- Add a feature to allow users to rate providers, and services.
+
+
+
+## LINKS & REFERENCES
+
+
+- [User Stories](https://docs.google.com/document/d/1I9iYG5fWQbXhT_h5o83vtI9FdkZCAhR-AsAmxAwqhAo/edit?usp=sharing)
+- [Trello Board](https://trello.com/invite/b/uRlkB7fx/ATTI500fe65321379f938e0f21f974913027A2B06AB0/carassistanceapp)
+- [Wireframes](https://docs.google.com/document/d/1BD2KFYGIQBmWolUziVCZ8cUQI0uCVZrRcHTQdVZCH1Y/edit?usp=sharing)
+- [ERD](https://docs.google.com/document/d/1TzmRxZaIm27CvyuIdwkvoDim3iEVFDhnx_z-5cusjHE/edit?usp=sharing)
+- [Guide to Add a Feature to a Web App](https://gist.github.com/jim-clark/9f9bd19d60d9ce2ec57be8242b6aee96)

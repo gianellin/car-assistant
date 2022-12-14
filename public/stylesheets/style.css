@@ -110,14 +110,14 @@ button{
   color:  rgb(56, 56, 56);
 }
 
-#button-more {
+#button-more, #edit-button {
   width: 10vmin;
   height: 3vmin;
   justify-content: center;
   align-items: center;
-  background-color: rgb(232, 232, 232);
+  background-color: white;
   font-weight: light;
-  font-size: 12px;
+  font-size: 14px;
   color:  rgb(56, 56, 56);
 
 }
@@ -129,7 +129,7 @@ button{
   align-items: center;
   background-color: rgb(54, 115, 255);
   font-weight: light;
-  font-size: 12px;
+  font-size: 18px;
   color: white;
 }
 
@@ -140,7 +140,7 @@ button{
   margin-top: 100px;
 }
 
-#buttonAdd{
+#buttonAdd, #button-add-service{
   border: none;
   margin: 2vmin;
   border-radius: 5vmin; 
@@ -159,10 +159,49 @@ button{
 
 }
 
-#form1Title{
+#titleDetails{
+  font-weight: light;
+  font-size: 20px;
+  padding: 5px 5px 5px 5px;
+  align-content: center;
+}
+
+#column1{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: light;
+ 
+}
+              
+#form1Title, #form2Title, #form3Title, #all-appointments, #titleService{
+  font-weight: light;
   font-size: 45px;
   font-family: 'Open Sans', sans-serif; 
-  font-weight: light;
+  padding: 20px 20px 20px 20px;
+  align-content: center;
+}
+
+#boxNewService, #boxEditService{
+background-color:  rgb(232, 232, 232);
+  padding: 50px 150px 50px 150px;
+  margin-top: 100px;
+}
+#box-index{
+  margin-top: 150px;
+  background-color:  rgb(232, 232, 232);
+}
+
+th{
+  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+  
+}
+
+td{
+  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+  font-weight: lighter ;
+}
+#table-1{
+  padding-left: 50px;
+  padding-right: 30px;
 }
 
 
@@ -191,8 +230,6 @@ button{
   margin-left: 20px;
   font-size: 14px;
 }
-
-
 
 #service-button{
   border: none;
@@ -224,8 +261,6 @@ footer {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   }
-
-
 
 
   [data-from-dependent] {

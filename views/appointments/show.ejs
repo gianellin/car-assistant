@@ -7,35 +7,31 @@
                 <div> <%= appointmentDoc.code %> </div>
                 <div><b> Date: </b></div> 
                 <div> <%= appointmentDoc.date %> </div>
-                <div><b> Vehicle </b></div>
+                <div><b> Vehicle: </b></div>
                 <div> <%= appointmentDoc.vehicleYear %> </div>
                 <div> <%= appointmentDoc.model %> </div>
    
             </div>
             <div id="column2">
-                <div> Services</div> <br>
+                <div id="titleService"> Services</div> <br>
                 <table>
                     <thead>
                       <tr> 
                         <th> Name </th>
-                        <th> Code  </th>
-                        <th> Time(days) </th>
-                        <th> Price($) </th>
+                        <th> Code </th>
+                        <th> Time </th>
+                        <th> Price </th>
                       </tr>
                     </thead>
                     <tbody>
                      <% servicesDoc.forEach(function(s) { %>
                         <tr>
-                          <td><%= s.name %></td>
-                          <td><%= s.code %></td>
-                          <td><%= s.time %>day(s)</td>
-                          <td>$ <%= s.price %></td>
-                          <!-- <td><form action="/appointments/<%#= s._id%>?_method=DELETE" method="POST">
-                                <button id="delete-button" type="submit"> - </button>
-                              </form> -->
-
+                          <td> <%= s.name %></td>
+                          <td> <%= s.serial %></td>
+                          <td> <%= s.time %></td>
+                          <td> <%= s.price %></td>
                           </td>
-                          <td><a href="/services/<%= s._id %>/edit"><button type="submit">Edit Service</button></a></td>
+                          <td><a href="/services/<%= s._id %>/edit"><button id="edit-button" type="submit">Edit</button></a></td>
                         </tr>
 
                         

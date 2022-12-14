@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>   
-    <div id="boxService">
-        <div id="form2Title">  Edit Service </div> <br> <br> <br>
+    <div id="boxEditService">
+        <div id="form3Title"> Edit Service </div> <br> <br> <br>
         <% if (user){ %> 
         <form id="service-edit-form" action="/services/<%= serviceDoc._id%>?_method=PUT" method="POST">
             <label> Name:
@@ -18,18 +18,29 @@
                 </select>
             </label><br><br>
             <label> Code:
-                <input type="text" name="code">
+                <select name="code"> 
+                    <option value="S0001">S0001</option>
+                    <option value="S0002-Subscription">S0002-Subscription</option>
+                    
+                </select>
             </label><br><br>
             <label> Time:
-                <input type="text" name="time">
+                <select name="time">
+                    <option value="Fast">Fast</option>
+                    <option value="Normal">Normal</option>
+                </select>
             </label><br><br>
             <label> Price:
-                <input type="text" name="price">
-            </label>
-            <input  type="submit" value="Done">   
+                <select name="price">
+                    <option value="$250-Subscription">$250-Subscription</option>
+                    <option value="$400-Subscription">$400-Subscription</option>
+                    <option value="Service-provider">Service-provider</option>
+                </select>
+            </label> 
+            <input id="button-add-service" type="submit" value="Done">  
         </form>
         <% }else { %> 
-            <div>Log In first</div>
+            <div>Login first</div>
         <% } %>
 
     </div>

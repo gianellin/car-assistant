@@ -1,10 +1,10 @@
 <%- include('../partials/header') %>   
 
     <div id="boxAppointment">
-        <div id="form1Title">  APPOINTMENT </div> <br> <br> <br>
+        <div id="form1Title"> New Appointment</div> <br> <br> <br>
         <form id="appointment-form" action="/appointments" method="POST">
             <label>Number
-                <input type="text" name="code">
+                <input type="text" name="serial">
             </label><br><br>
             <label> Date: 
                 <input type="datetime-local" name="date">
@@ -88,9 +88,11 @@
                     <option value="SL Roadster" data-from-dependent="Mercedes Benz">SL Roadster</option>
                 </select>
             </label> 
-            <input id="buttonAdd" type="submit" value="Add Appointment">   
+            <input id="buttonAdd" type="submit" value="Done">   
         </form>
         <script>
+            //data dependendent selector
+            // https://stackoverflow.com/questions/19728666/drop-down-box-dependent-on-the-option-selected-in-another-drop-down-box
             document.addEventListener("change", checkSelect);
             function checkSelect(evt) {
                     const origin = evt.target;

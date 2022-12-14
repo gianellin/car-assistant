@@ -1,11 +1,12 @@
 <%- include('../partials/header') %>
-<h2 id=""> Appointments </h2>
-<table>
+<div id="box-index">
+<div id="all-appointments"> All Appointments </div>
+<table id="table-1">
   <thead>
     <tr> 
       <th> Code </th>
       <th> Vehicle Make </th>
-      <th> Vehicle Model </th>
+      <th> Model </th>
       <th> Date </th>
     </tr>
   </thead>
@@ -13,7 +14,6 @@
    <%appointments.forEach(function(a) { %>
       <tr>
         <td><%= a.code %></td>
-        
         <td><%= a.vehicleMake %></td>
         <td><%= a.model  %></td>
         <td><%= a.date %></td>
@@ -26,4 +26,5 @@
       <% }); %>
   </tbody>
 </table>
+</div>
 <%- include('../partials/footer') %>

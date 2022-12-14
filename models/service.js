@@ -10,23 +10,27 @@ const serviceSchema = new Schema({
         enum: ['Oil & Filter Change',  'Tire Rotation',  'State Inspection',  'Wheel Alignment', 
         'Tire Replacement',  'Flat Repair',  'Roadside Assistance', 'Brake',
          'Brake Fluid Exchange', 'Other'],
-        required: true, unique: true
+       
     },
     code: {
         type: String,
+        enum: [ "S0001", "S0002-Subscription"],
+       
     },
     time: {
         type: String,
+        enum: ["Fast", "Normal"],
+      
     },
     price: {
-        type: Number,
+        type: String,
+        enum: ["$250-Subscription", "Service-provider", "$400-Subscription"],
+       
     },
-
     appointment: {
             type: Schema.Types.ObjectId,
             ref: 'Appointment'
     }
-
 });
 
 
