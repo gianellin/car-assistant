@@ -60,7 +60,7 @@ This model has different functionalities, using CRUD
 
 Find the deployed app:
 
- ![Car Assistant](https://alive-crow-leggings.cyclic.app)
+[Car Assistant](https://alive-crow-leggings.cyclic.app)
 
 
 ## API PATHS AND METHODS
