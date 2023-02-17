@@ -20,10 +20,9 @@ const create =(req, res) => {
                 //respond to the client - url
                 res.redirect(`/appointments`);
             }
-        });
-
-        
+        });  
 }
+
  // Handles the list of appointments made for the user
 const index = (req, res) => {
     Appointment.find({}, function(err, appointmentDocs) {
